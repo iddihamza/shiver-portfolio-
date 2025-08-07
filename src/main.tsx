@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import TestApp from './TestApp.tsx'
-// import './index.css'  // Temporarily disable CSS imports
+import './index.css'  // Re-enable CSS imports
 
 // Add error handling for deployment debugging
 window.addEventListener('error', (event) => {
@@ -18,10 +18,8 @@ try {
     throw new Error('Root element not found');
   }
 
-  // Use test app first to verify basic deployment
-  const useTestApp = window.location.pathname === '/test' || window.location.search.includes('test=true');
-  
-  createRoot(root).render(useTestApp ? <TestApp /> : <App />);
+  // Use full app now that Supabase is connected
+  createRoot(root).render(<App />);
 } catch (error) {
   console.error('Failed to render app:', error);
   document.body.innerHTML = `
