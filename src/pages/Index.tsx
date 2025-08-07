@@ -62,9 +62,9 @@ const Index = memo(() => {
 
   /* -------------------------------- Render --------------------------------- */
 
-  return <div className="min-h-screen bg-background pt-20 md:pt-24">
+  return <div className="min-h-screen bg-background pt-24">
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center relative text-center text-white bg-black snap-section pt-16 md:pt-24 lg:pt-0">
+      <section className="min-h-screen flex flex-col items-center justify-center relative text-center text-white bg-black snap-section pt-24 lg:pt-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black/90" />
 
         <div className="relative max-w-6xl px-4 z-10 w-full">
@@ -129,94 +129,16 @@ const Index = memo(() => {
             Every soul in Rookwick carries a secret—click a dossier to dig into theirs.
           </p>
 
-          {/* Character Search - Mobile Optimized */}
-          <div className="max-w-md mx-auto mb-8 md:mb-12 bounce-in px-4 md:px-0">
+          {/* Character Search */}
+          <div className="max-w-md mx-auto mb-12 bounce-in">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4 md:w-4 md:h-4 transition-transform duration-200 hover:scale-110" />
-              <Input 
-                type="text" 
-                placeholder="Search characters..." 
-                value={characterSearch} 
-                onChange={e => setCharacterSearch(e.target.value)} 
-                className="pl-10 mono-font bg-card/50 border-border hover-glow transition-all duration-200 focus:border-accent text-base md:text-sm h-12 md:h-10 touch-friendly" 
-              />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4 transition-transform duration-200 hover:scale-110" />
+              <Input type="text" placeholder="Search characters..." value={characterSearch} onChange={e => setCharacterSearch(e.target.value)} className="pl-10 mono-font bg-card/50 border-border hover-glow transition-all duration-200 focus:border-accent" />
             </div>
           </div>
 
-          {/* Mobile Character Grid - Better for Touch */}
-          <div className="block md:hidden">
-            {filteredCharacters.length > 0 ? (
-              <div className="grid grid-cols-2 gap-3 px-4">
-                {filteredCharacters.map((character, index) => (
-                  <FadeIn key={character.id} delay={index * 0.1}>
-                    <Link 
-                      to={character.route} 
-                      className="mobile-character-card bg-card border border-border rounded-lg overflow-hidden touch-friendly group block"
-                    >
-                      {/* Character Image - Larger and more prominent */}
-                      <div className="relative w-full aspect-[3/4] bg-gradient-to-b from-muted/20 to-card">
-                        {character.image ? (
-                          <img 
-                            src={character.image} 
-                            alt={character.name} 
-                            loading="lazy" 
-                            className="w-full h-full object-cover" 
-                          />
-                        ) : (
-                          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-accent/10 to-accent/5">
-                            <div className="text-center">
-                              <div className="w-12 h-16 bg-foreground/20 rounded-full mx-auto mb-2" />
-                              <p className="text-accent mono-font text-xs">Soon</p>
-                            </div>
-                          </div>
-                        )}
-                        {/* Mobile-friendly overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                        <div className="absolute bottom-0 left-0 right-0 p-3">
-                          <h3 className="mono-font text-white font-medium text-sm mb-1">
-                            {character.name}
-                          </h3>
-                          {character.title && (
-                            <p className="text-xs text-white/80 mono-font">
-                              {character.title}
-                            </p>
-                          )}
-                        </div>
-                      </div>
-                    </Link>
-                  </FadeIn>
-                ))}
-                {/* Add Character Button for Mobile */}
-                {isAdmin && (
-                  <Link 
-                    to="/portfolio/characters/new" 
-                    className="mobile-character-card border-2 border-dashed border-border rounded-lg flex flex-col items-center justify-center aspect-[3/4] touch-friendly"
-                  >
-                    <Plus className="w-8 h-8 mb-2 text-accent" />
-                    <span className="mono-font text-sm text-accent">Add Character</span>
-                  </Link>
-                )}
-              </div>
-            ) : (
-              <div className="text-center py-12 px-4">
-                <Users className="w-16 h-16 text-muted-foreground/50 mx-auto mb-4" />
-                <p className="mono-font text-lg mb-2">No characters found</p>
-                <p className="text-sm text-muted-foreground mb-6">Try adjusting your search</p>
-                {isAdmin && (
-                  <Link 
-                    to="/portfolio/characters/new" 
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-lg mono-font font-medium touch-friendly"
-                  >
-                    <Plus className="w-5 h-5" />
-                    Add First Character
-                  </Link>
-                )}
-              </div>
-            )}
-          </div>
-
-          {/* Desktop Horizontal Scroll - Original Layout */}
-          <div className="hidden md:block scroll-gallery">
+          {/* Characters Horizontal Scroll */}
+          <div className="scroll-gallery">
             {filteredCharacters.length > 0 ? <>
                 {filteredCharacters.map((character, index) => <FadeIn key={character.id} delay={index * 0.1}>
                   <Link to={character.route} className="scroll-card character-card bg-card border border-border card-hover will-change-transform group block hover-lift-scale hover-glow-intense stagger-item">
@@ -277,63 +199,8 @@ const Index = memo(() => {
             From the Veil-touched alleyways to Yakoshima Temple—pinpoint the world of Shiver. Each location holds secrets and dangers that only the initiated understand.
           </p>
 
-          {/* Mobile Locations Grid */}
-          <div className="block md:hidden">
-            {locations.length > 0 ? (
-              <div className="grid grid-cols-1 gap-4 px-4">
-                {locations.map((location, index) => (
-                  <FadeIn key={location.id} delay={index * 0.1}>
-                    <Link 
-                      to="/locations" 
-                      className="mobile-character-card bg-card border border-border rounded-lg overflow-hidden touch-friendly group flex"
-                    >
-                      <div className="w-24 h-20 bg-gradient-to-b from-accent/10 to-accent/5 flex items-center justify-center flex-shrink-0">
-                        <MapPin className="w-8 h-8 text-accent/70" />
-                      </div>
-                      <div className="flex-1 p-3">
-                        <h3 className="mono-font text-foreground font-medium text-sm mb-1">
-                          {location.name}
-                        </h3>
-                        <p className="text-xs text-muted-foreground mono-font mb-1">
-                          {location.location_type || 'Unknown Type'}
-                        </p>
-                        <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">
-                          {location.summary || 'No description available.'}
-                        </p>
-                      </div>
-                    </Link>
-                  </FadeIn>
-                ))}
-                {isAdmin && (
-                  <Link 
-                    to="/portfolio/locations/new" 
-                    className="mobile-character-card border-2 border-dashed border-border rounded-lg flex items-center justify-center p-6 touch-friendly"
-                  >
-                    <Plus className="w-6 h-6 mr-2 text-accent" />
-                    <span className="mono-font text-sm text-accent">Add Location</span>
-                  </Link>
-                )}
-              </div>
-            ) : (
-              <div className="text-center py-12 px-4">
-                <MapPin className="w-16 h-16 text-muted-foreground/50 mx-auto mb-4" />
-                <p className="mono-font text-lg mb-2">No locations yet</p>
-                <p className="text-sm text-muted-foreground mb-6">Locations will appear here</p>
-                {isAdmin && (
-                  <Link 
-                    to="/portfolio/locations/new" 
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-lg mono-font font-medium touch-friendly"
-                  >
-                    <Plus className="w-5 h-5" />
-                    Add First Location
-                  </Link>
-                )}
-              </div>
-            )}
-          </div>
-
-          {/* Desktop Locations Horizontal Scroll */}
-          <div className="hidden md:block scroll-gallery">
+          {/* Locations Horizontal Scroll */}
+          <div className="scroll-gallery">
             {locations.length > 0 ? <>
                 {locations.map((location, index) => <FadeIn key={location.id} delay={index * 0.1}>
                     <Link to="/locations" className="scroll-card bg-card border border-border card-hover will-change-transform group block">
