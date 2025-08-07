@@ -600,6 +600,24 @@ All colors MUST be HSL.
       transform: scale(1.02); /* Reduced scale for mobile */
     }
     
+    /* Mobile Character Cards */
+    .mobile-character-card {
+      transition: all 0.2s ease-out;
+      transform: translateY(0px) scale(1);
+      box-shadow: 0 2px 8px hsl(var(--background) / 0.8);
+    }
+    
+    .mobile-character-card:active {
+      transform: translateY(1px) scale(0.98);
+      filter: brightness(0.9);
+      box-shadow: 0 1px 4px hsl(var(--background) / 0.6);
+    }
+    
+    .mobile-character-card:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 4px 16px hsl(var(--accent) / 0.2);
+    }
+    
     /* Mobile navigation improvements */
     .mobile-nav {
       backdrop-filter: blur(10px);
