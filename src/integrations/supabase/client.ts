@@ -31,7 +31,7 @@ if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
 } else {
   client = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
     auth: {
-      storage: localStorage,
+      storage: typeof window !== 'undefined' ? localStorage : undefined,
       persistSession: true,
       autoRefreshToken: true,
     }
