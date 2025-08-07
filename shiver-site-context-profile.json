@@ -1,0 +1,399 @@
+{
+  "site": {
+    "name": "Shiver",
+    "tagline": "Unravel the Unknown",
+    "type": "single-page-application",
+    "theme": "mystery-detective-supernatural",
+    "designSystem": {
+      "colorScheme": "dark",
+      "fontFamily": "mono-font",
+      "primaryColors": {
+        "accent": "neon-pink",
+        "background": "black-gradient",
+        "foreground": "white",
+        "muted": "gray-variants"
+      },
+      "effects": {
+        "glows": ["tech-card-glow", "tech-box-glow", "neon-pink"],
+        "gradients": ["bg-gradient-to-b from-black via-black/95 to-black/90"],
+        "backdrop": "backdrop-blur-tech"
+      }
+    },
+    "metadata": {
+      "copyright": "© 2025 Shiver Project. All rights reserved.",
+      "description": "A mystery story universe where every character hides a secret—and every clue brings you closer to the truth.",
+      "keywords": ["mystery", "detective", "supernatural", "storytelling", "character design", "narrative universe"]
+    }
+  },
+  "navigation": {
+    "header": {
+      "logo": "Shiver",
+      "position": "fixed-top",
+      "background": "bg-background/90 backdrop-blur-tech",
+      "menuItems": [
+        {
+          "label": "Story",
+          "anchor": "#features",
+          "description": "The Shiver Files section"
+        },
+        {
+          "label": "Characters", 
+          "anchor": "#characters",
+          "description": "Character gallery and profiles"
+        },
+        {
+          "label": "Tech",
+          "anchor": "#tech", 
+          "description": "Technology stack and methodology"
+        },
+        {
+          "label": "Contact",
+          "anchor": "#contact",
+          "description": "Contact form and collaboration"
+        }
+      ]
+    }
+  },
+  "sections": {
+    "hero": {
+      "id": "hero",
+      "layout": "fullscreen-centered",
+      "background": "black with gradient overlay",
+      "content": {
+        "title": "Unravel the Unknown",
+        "subtitle": "Shiver is a mystery story universe where every character hides a secret—and every clue brings you closer to the truth.",
+        "cta": {
+          "text": "Explore the World",
+          "style": "hero-button",
+          "action": "scroll-to-content"
+        }
+      },
+      "characterSilhouettes": [
+        {
+          "id": 1,
+          "name": "Detective",
+          "color": "red",
+          "description": "Click to reveal",
+          "interactive": true,
+          "status": "coming-soon"
+        },
+        {
+          "id": 2,
+          "name": "Scholar", 
+          "color": "orange",
+          "description": "Click to reveal",
+          "interactive": true,
+          "status": "coming-soon"
+        },
+        {
+          "id": 3,
+          "name": "Agent",
+          "color": "purple", 
+          "description": "Click to reveal",
+          "interactive": true,
+          "status": "coming-soon"
+        },
+        {
+          "id": 4,
+          "name": "Angel",
+          "color": "white",
+          "description": "Click to reveal", 
+          "interactive": true,
+          "status": "coming-soon"
+        },
+        {
+          "id": 5,
+          "name": "Warrior",
+          "color": "blue",
+          "description": "Click to reveal",
+          "interactive": true,
+          "status": "coming-soon"
+        }
+      ]
+    },
+    "characterGallery": {
+      "id": "characters",
+      "title": "Meet the Cast",
+      "subtitle": "Each character harbors secrets that could unravel everything. Click to explore their mysteries.",
+      "layout": "horizontal-scroll",
+      "background": "bg-card/10",
+      "characters": [
+        {
+          "id": 1,
+          "title": "Mystery #1",
+          "description": "Click to unveil",
+          "visual": "character-silhouette-placeholder",
+          "interactive": true,
+          "status": "coming-soon"
+        },
+        {
+          "id": 2,
+          "title": "Mystery #2",
+          "description": "Click to unveil",
+          "visual": "character-silhouette-placeholder",
+          "interactive": true,
+          "status": "coming-soon"
+        },
+        {
+          "id": 3,
+          "title": "Mystery #3",
+          "description": "Click to unveil",
+          "visual": "character-silhouette-placeholder",
+          "interactive": true,
+          "status": "coming-soon"
+        },
+        {
+          "id": 4,
+          "title": "Mystery #4",
+          "description": "Click to unveil",
+          "visual": "character-silhouette-placeholder",
+          "interactive": true,
+          "status": "coming-soon"
+        },
+        {
+          "id": 5,
+          "title": "Mystery #5",
+          "description": "Click to unveil",
+          "visual": "character-silhouette-placeholder",
+          "interactive": true,
+          "status": "coming-soon"
+        }
+      ]
+    },
+    "features": {
+      "id": "features",
+      "title": "The Shiver Files",
+      "subtitle": "Explore the different aspects of the Shiver universe",
+      "layout": "4-column-grid",
+      "cards": [
+        {
+          "title": "Characters",
+          "icon": "character-icon",
+          "description": "Meet the cast—each with their own past, powers, and purpose. Discover their stories through dossiers and visual clues.",
+          "category": "content-type"
+        },
+        {
+          "title": "Cases",
+          "icon": "case-icon", 
+          "description": "Dive into a growing archive of mysterious cases, unsolved incidents, and world lore hidden behind encrypted files.",
+          "category": "content-type"
+        },
+        {
+          "title": "Locations",
+          "icon": "location-icon",
+          "description": "From shadowed alleys to ancient ruins—explore places that connect the puzzle pieces of Shiver's world.",
+          "category": "content-type"
+        },
+        {
+          "title": "Multimedia",
+          "icon": "multimedia-icon",
+          "description": "Concept art, character music themes, audio logs, and short clips from the story world—all in one place.",
+          "category": "content-type"
+        }
+      ]
+    },
+    "about": {
+      "id": "about",
+      "title": "What is Shiver?",
+      "content": "Shiver is a passion project born from a love of mystery, storytelling, and character design. It's a growing narrative universe that blends detective fiction with supernatural elements, told through visuals, music, and digital storytelling. This is where it all lives.",
+      "layout": "centered-text",
+      "background": "bg-card/20"
+    },
+    "howItWorks": {
+      "id": "how-it-works",
+      "title": "How It Works", 
+      "subtitle": "Your creative ideas transform into rich visual narratives through our streamlined process",
+      "layout": "3-step-process",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Your Ideas",
+          "icon": "Lightbulb",
+          "description": "Start with your creative vision—characters, stories, worlds, or concepts you want to bring to life."
+        },
+        {
+          "number": 2,
+          "title": "JSON Templates",
+          "icon": "Code", 
+          "description": "We structure your ideas into smart JSON templates that capture every detail and creative direction."
+        },
+        {
+          "number": 3,
+          "title": "AI Visuals",
+          "icon": "Palette",
+          "description": "Advanced AI transforms your structured concepts into stunning, consistent visuals that match your vision."
+        }
+      ],
+      "workflow": {
+        "sequence": ["Ideas", "Structure", "Visuals"],
+        "connector": "ArrowRight",
+        "philosophy": "streamlined-creative-process"
+      }
+    },
+    "tech": {
+      "id": "tech",
+      "title": "Powered by Kaizen",
+      "subtitle": "Built with cutting-edge tools and methodologies that ensure quality, efficiency, and scalability",
+      "layout": "4-column-grid",
+      "background": "bg-card/20",
+      "tools": [
+        {
+          "name": "JSON Templates",
+          "icon": "Code",
+          "description": "Structured data architecture for consistent, scalable content creation and management.",
+          "category": "data-structure"
+        },
+        {
+          "name": "Make.com",
+          "icon": "Zap",
+          "description": "Automated workflows that connect tools, streamline processes, and ensure seamless operations.",
+          "category": "automation"
+        },
+        {
+          "name": "Notion",
+          "icon": "Database", 
+          "description": "Collaborative workspace for project management, documentation, and creative organization.",
+          "category": "project-management"
+        },
+        {
+          "name": "OpenAI",
+          "icon": "Bot",
+          "description": "Advanced AI models for content generation, visual creation, and intelligent automation.",
+          "category": "ai-generation"
+        }
+      ],
+      "philosophy": {
+        "title": "The Kaizen Philosophy",
+        "description": "Continuous improvement through iterative processes, efficient workflows, and thoughtful automation. Every tool serves a purpose, every process can be refined, and every project benefits from methodical excellence.",
+        "principles": [
+          "Continuous improvement",
+          "Iterative processes", 
+          "Efficient workflows",
+          "Thoughtful automation",
+          "Methodical excellence"
+        ]
+      }
+    },
+    "contact": {
+      "id": "contact",
+      "title": "Want to Collaborate or Follow?",
+      "layout": "centered-form",
+      "form": {
+        "fields": [
+          {
+            "name": "name",
+            "type": "text",
+            "placeholder": "Your Name",
+            "required": true,
+            "validation": "string"
+          },
+          {
+            "name": "email", 
+            "type": "email",
+            "placeholder": "Your Email",
+            "required": true,
+            "validation": "email"
+          },
+          {
+            "name": "message",
+            "type": "textarea",
+            "placeholder": "Tell us what you're thinking",
+            "rows": 5,
+            "required": false,
+            "validation": "string"
+          }
+        ],
+        "submitButton": {
+          "text": "Send Message",
+          "style": "tech-box-glow bg-accent",
+          "action": "form-submission"
+        },
+        "currentAction": "console-log-placeholder"
+      }
+    },
+    "footer": {
+      "id": "footer",
+      "content": "© 2025 Shiver Project. All rights reserved.",
+      "layout": "centered-text",
+      "background": "bg-background border-t border-border"
+    }
+  },
+  "interactivity": {
+    "characterClicks": {
+      "heroSilhouettes": "alert-coming-soon",
+      "galleryCards": "alert-coming-soon",
+      "description": "Placeholder functionality for character profile navigation"
+    },
+    "navigation": {
+      "type": "smooth-scroll-anchors",
+      "headerFixed": true,
+      "mobileResponsive": true
+    },
+    "forms": {
+      "contact": {
+        "validation": "client-side-required-fields",
+        "submission": "console-log-development",
+        "stateManagement": "react-useState"
+      }
+    }
+  },
+  "technicalImplementation": {
+    "framework": "React",
+    "buildTool": "Vite", 
+    "styling": "TailwindCSS",
+    "uiComponents": "ShadcnUI",
+    "language": "TypeScript",
+    "routing": "react-router-dom",
+    "stateManagement": "React useState",
+    "responsiveDesign": true,
+    "accessibility": "semantic-html-structure"
+  },
+  "contentStrategy": {
+    "tone": "mysterious-professional",
+    "voice": "narrative-driven",
+    "themes": ["mystery", "detective work", "supernatural elements", "character development"],
+    "targetAudience": "creative professionals, storytellers, mystery enthusiasts",
+    "contentTypes": [
+      "character profiles",
+      "case files", 
+      "location descriptions",
+      "multimedia content",
+      "visual narratives"
+    ]
+  },
+  "futureFeatures": {
+    "planned": [
+      "Individual character profile pages",
+      "Interactive case file system",
+      "Location exploration maps", 
+      "Multimedia gallery",
+      "User authentication system",
+      "Content management dashboard"
+    ],
+    "technical": [
+      "Database integration",
+      "Dynamic content loading",
+      "User-generated content",
+      "Multi-media file handling",
+      "Search functionality"
+    ]
+  },
+  "designPatterns": {
+    "layout": "mobile-first-responsive",
+    "colorSystem": "dark-theme-with-accent-highlights",
+    "typography": "monospace-technical-aesthetic", 
+    "animations": "subtle-hover-effects-and-transitions",
+    "cards": "tech-glow-effects-with-gradient-backgrounds",
+    "interactions": "hover-states-and-click-feedback"
+  },
+  "performance": {
+    "optimizations": [
+      "Component-based architecture",
+      "Efficient re-renders with React",
+      "Tree-shaking with Vite",
+      "Responsive image handling",
+      "Minimal external dependencies"
+    ],
+    "loadingStrategy": "single-page-app-instant-navigation"
+  }
+}
